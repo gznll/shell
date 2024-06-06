@@ -10,6 +10,11 @@ This repository contains a collection of shell scripts for performing various Wi
 
 ## Usage:
 
+### Install
+```bash
+wget https://raw.githubusercontent.com/gznll/shell/main/wifi/{wifi_dump.sh,python_server.sh,death_wifi.sh}
+```
+
 ### Get AP list
 ```bash
 airodump-ng wlan0 -w out
