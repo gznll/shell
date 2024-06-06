@@ -12,6 +12,6 @@ stop_server() {
 
 stop_server
 
-python3 -m http.server "$PORT" &
+python3 -m http.server "$PORT" 
 
 echo "HTTP server start, port -  $PORT"
