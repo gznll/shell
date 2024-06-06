@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ $# -lt 2 ]; then
+    echo "Use: $0 MAC_ADDRESS CHANNEL [OUTPUT_FILE]"
+    exit 1
+fi
+
+MAC_ADDRESS=$1
+CHANNEL=$2
+OUTPUT_FILE=$3
+
+if [ -z "$OUTPUT_FILE" ]; then
+    airodump-ng --bssid "$MAC_ADDRESS" --channel "$CHANNEL" wlan0
+else
+    airodump-ng --bssid "$MAC_ADDRESS" --channel "$CHANNEL" wlan0 -w "$OUTPUT_FILE"
+fi
