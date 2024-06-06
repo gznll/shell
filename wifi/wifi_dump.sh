@@ -3,7 +3,7 @@
 if [ $# -lt 2 ]; then
     echo -e "Use: $0 MAC_ADDRESS CHANNEL [OUTPUT_FILE] \n"
     echo -e "info: get AP list- airodump-ng wlan0 -w out \n"
-    echo "info: airmon-ng check kill"
+    echo "info: script use-  airmon-ng check kill"
     echo "info: for return use- sudo systemctl restart NetworkManager"
 
     exit 1
