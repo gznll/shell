@@ -10,9 +10,7 @@ This repository contains a collection of shell scripts for performing various Wi
 
 ## Usage:
 
-###
-
-Get AP list
+### Get AP list
 ```bash
 airodump-ng wlan0 -w out
 ```
