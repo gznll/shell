@@ -1,5 +1,5 @@
 #!/bin/bash
-
+clear
 if [ $# -lt 2 ]; then
     echo "Use: $0 DEAUTH_COUNT MAC_ADDRESS [INTERFACE wlan0]"
     exit 1
