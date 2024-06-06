@@ -10,6 +10,15 @@ This repository contains a collection of shell scripts for performing various Wi
 
 ## Usage:
 
+###
+
+Get AP list
+```bash
+airodump-ng wlan0 -w out
+```
+output: out-01.csv
+
+
 ### Wi-Fi Dumping (wifi_dump.sh)
 
 This script uses airodump-ng to capture Wi-Fi packets from a specific Access Point (AP).
@@ -66,6 +75,3 @@ Note: Ensure that the current directory contains the files you want to serve.
 
 These scripts are provided "as is" without warranty of any kind. Use them at your own risk.
 
-
-
-    
