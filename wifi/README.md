@@ -19,6 +19,11 @@ wget https://raw.githubusercontent.com/gznll/shell/main/wifi/{wifi_dump.sh,pytho
 ```bash
 airodump-ng wlan0 -w out
 ```
+wlan0 to monitor mode
+
+```bash
+airmon-ng check kill
+```
 
 ```bash
 airodump-ng --bssid 11:22:33:44:55:66 --channel 2 wlan0 -w output
