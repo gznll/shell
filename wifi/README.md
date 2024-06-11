@@ -34,7 +34,7 @@ wpaclean out.cap in.cap
 ```
 #### Use in xls:
 
-#### replace in text mode out-01.csv  [' ' > '']
+#### replace in text mode out-01.csv  [' ' > '' and ','>';']
 #### Insert formula in Cell:
 
 ```sh
