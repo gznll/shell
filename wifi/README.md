@@ -32,9 +32,10 @@ airodump-ng --bssid 11:22:33:44:55:66 --channel 2 wlan0 -w output
 aireplay-ng --deauth 10 -a 11:22:33:44:55:66 wlan0 	
 wpaclean out.cap in.cap
 ```
+#### Use in xls:
 
-#### For use in xls:
-replace ' ' > ''
+#### replace in text mode out-01.csv  [' ' > '']
+#### Insert formula in Cell:
 
 ```sh
 x	dump	death	clean
