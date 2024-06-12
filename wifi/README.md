@@ -15,9 +15,17 @@ This repository contains a collection of shell scripts for performing various Wi
 wget https://raw.githubusercontent.com/gznll/shell/main/wifi/{wifi_dump.sh,python_server.sh,death_wifi.sh}
 ```
 ### Check in
-#### 
+#### wlan0 status
 ```bash
 iwconfig
+```
+#### Active wifi interface
+```bash
+iw dev
+```
+#### AP availeble list
+```bash
+iwlist wlan0 scanning | grep -i essid
 ```
 ### Get AP list
 #### Kill services
