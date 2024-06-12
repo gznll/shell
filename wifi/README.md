@@ -14,15 +14,17 @@ This repository contains a collection of shell scripts for performing various Wi
 ```bash
 wget https://raw.githubusercontent.com/gznll/shell/main/wifi/{wifi_dump.sh,python_server.sh,death_wifi.sh}
 ```
-
+### Check in
+#### 
+```bash
+iwconfig
+```
 ### Get AP list
-
-#### wlan0 to monitor mode
+#### Kill services
 ```bash
 airmon-ng check kill
 ```
-#### AP list to file: out-01.csv
-
+#### wlan0 to monitor mode and get AP list in out-01.csv
 ```bash
 airodump-ng wlan0 -w out
 ```
