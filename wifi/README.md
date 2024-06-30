@@ -61,7 +61,8 @@ x	dump	death	clean	sh
 	1 - run Dumping
 	2 - run Deahth Attack 
 	3 - Monitoring clean package, if get then attack OK
-	Find pwd
+
+Find pwd
 ```sh	
 aircrack-ng -l "outPwd.txt" -w 8weakpass.txt ./clean_18-13.cap
 ```
